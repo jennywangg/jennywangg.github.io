@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		#crab{
+			width:150px;
+			height:150px;
+			background-image:url(crab.png);
+			right:5%;
+			top:5%;
+			background-size:contain;
+			background-repeat: no-repeat;
+			animation-name:dance;
+			animation-duration:10s;
+			animation-iteration-count: infinite;
+			position:absolute;
+		}
+
+@keyframes dance{
+
+	0%{
+		right:10%;
+		top:10%;
+
+	}
+
+	20%{
+		right:10%;
+		top:80%;
+	}
+
+	40%{
+		right:90%;
+		top:80%;
+	}
+
+	60%{
+		right:90%;
+		top:10%;
+	}
+
+}
+
+	</style>
+
+
+</head>
+<body>
+
+
+	<div id="crab"></div>
+</body>
+</html>
