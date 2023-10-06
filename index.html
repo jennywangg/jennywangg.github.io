@@ -4,11 +4,10 @@
 <!-- use this?: https://bestanimations.com/media/fish/822435113tiny-small-pixel-fish-aquarium-animated-gif-picture-19.gif -->
 
 <!-- questions: 
-	help with sand
-	why does fish only move once?
-	update website, why isn't it working
+	
+	when hover on each object, it says what clicking it will do
 	how should I make the bubbles move?
-	center the title -->
+	 -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +24,7 @@
 			background-repeat: no-repeat;
 			position:absolute;
 			top:270px;
-			right:85%;
+			right:70%;
 		}
 
 		#bubble2{
@@ -36,7 +35,7 @@
 			background-repeat: no-repeat;
 			position:absolute;
 			top:110px;
-			right:90%;
+			right:85%;
 		}
 
 		#bubble3{
@@ -47,54 +46,84 @@
 			background-repeat: no-repeat;
 			position:absolute;
 			top:200px;
-			right:90%;
+			right:80%;
 		}
 
 		#fish{
 			width:200px;
 			height:200px;
-			background-image:url(clownfishgif.gif);
+			background-image:url(https://bestanimations.com/media/fish/116271689clownfishanimation-30.gif);
 			background-size: contain;
-			background-repeat: repeat;
+			background-repeat: no-repeat;
 			position:absolute;
-			top:100px;
-			right:60%;
+			top:170px;
+			right:50%;
+
+		}
+
+		#fish2{
+			width:75px;
+			height:75px;
+			background-image:url(https://bestanimations.com/media/fish/822435113tiny-small-pixel-fish-aquarium-animated-gif-picture-19.gif);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			top:270px;
+			right:45%;
+
+		}
+
+		#fish3{
+			width:75px;
+			height:75px;
+			background-image:url(https://bestanimations.com/media/fish/474123788tiny-small-pixel-fish-aquarium-animated-gif-picture-10.gif);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			top:130px;
+			right:35%;
 
 		}
 
 		#plant{
-			width:400px;
-			height:300px;
-			background-image:url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/15775/aquatic-plant-clipart-xl.png);
+			width:450px;
+			height:350px;
+			background-image:url(plant.png);
 			background-size: contain;
 			background-repeat: no-repeat;
 			position:absolute;
 			top:150px;
-			left:40%;
+			left:70%;
 		}
 
 		#treasure{
-			width:120px;
-			height:90px;
+			width:150px;
+			height:120px;
 			background-image:url(https://bestanimations.com/media/coins/871505132Treasure-02-june.gif);
 			background-size: contain;
 			background-repeat: no-repeat;
 			position:absolute;
-			top:370px;
-			left:15%;
+			top:400px;
+			left:35%;
 		}
 
 		#tank{
 			width:100%;
 			height:500px;
 			background-color:royalblue;
+			position:absolute;
+			top:0%;
 
 		}
 
 		#sand{
 			width:100%;
-			height:100px;
-/*			help*/
+			height:120px;
+			background-color:khaki;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top:500px;
 
 		}
 
@@ -104,10 +133,10 @@
 				 monospace;;
 		}
 
-/*how do I move this to the center?*/
-		#h1{right:50%}
-/*		this isnt working*/
 
+#title{
+	font-size:50px;
+}
 
 	</style>
 
@@ -117,11 +146,16 @@
 
 
 <div id="tank">
-	<div id="sand">
 	
-		<h1 >Welcome to my Fishtank!</h1>
+		<center><p id="title">Welcome to my Website!</p></center>
 		<a href="aboutme.html">
 		<div id="fish"></div></a>
+
+		<a href="aboutme.html">
+		<div id="fish2"></div></a>
+
+		<a href="aboutme.html">
+		<div id="fish3"></div></a>
 
 		<a href="projects.html">
 		<div id="bubble1"></div></a>
@@ -136,7 +170,7 @@
 		<a href="journal.html">
 		<div id="treasure"></div></a>
 
-	</div>
+		<div id="sand"></div>
 
 </div>
 </body>
