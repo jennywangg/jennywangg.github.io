@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style>
+	#hey{
+		cursor:none;
+		background-image:url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4755abc4-bff5-4036-af15-0e74223a7dcd/de7i41i-4ea10afb-b93b-4139-8d61-688fc8013fbb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3NTVhYmM0LWJmZjUtNDAzNi1hZjE1LTBlNzQyMjNhN2RjZFwvZGU3aTQxaS00ZWExMGFmYi1iOTNiLTQxMzktOGQ2MS02ODhmYzgwMTNmYmIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.GJYR6DmjiXeiRdrkEVbce9tLYq_EiMmzHW7x2GQdKoE);
+		width:300px;
+		height:300px;
+		font-size:50px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position:absolute;
+		top:0px;
+		left:0px;
+
+	}
+	#park{
+		background-image:url(parkbackground.png);
+		width:100%;
+		height:100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position:absolute;
+	}
+
+	</style>
+</head>
+<body>
+
+	<div id="park"></div>
+	<div id="hey">
+	</div>
+
+	<script type="text/javascript">
+
+			document.addEventListener("mousemove", function(event){
+
+				hey.style.left = event.clientX -150 +"px";
+				hey.style.top = event.clientY -150 +"px";
+				// console.log(event.clientX, event.clientY)
+
+
+			})
+
+	</script>
+
+
+</body>
+</html>
