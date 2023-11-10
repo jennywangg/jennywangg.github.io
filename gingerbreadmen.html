@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function makeGingerbreadMen (){
+			var cookie = document.createElement("div");
+			document.body.appendChild(cookie);
+			cookie.style.backgroundImage="url(gingerbreadman.png)";
+			cookie.style.width = "200px";
+			cookie.style.height = "200px";
+			cookie.style.display = "inline-block";
+			cookie.style.backgroundSize = "contain";
+			cookie.style.backgroundRepeat = "no-repeat";
+
+			cookie.addEventListener("mouseenter", function(){
+
+				cookie.style.backgroundImage="url(xmasman.png)";
+				cookie.style.width = "200px";
+				cookie.style.height = "200px";
+				cookie.style.display = "inline-block";
+				cookie.style.backgroundSize = "contain";
+				cookie.style.backgroundRepeat = "no-repeat";
+			})
+		}
+		setInterval(makeGingerbreadMen, 700);
+	</script>
+
+</body>
+</html>
