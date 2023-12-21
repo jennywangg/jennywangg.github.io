@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	#background{
+		background-image:url(xmasbg.jpg);
+		width:100%;
+		height:100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position:absolute;
+		z-index: -20;
+	}
+
+	#message{
+		background-image:url(xmascard.png);
+		width:300px;
+		height:300px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position:absolute;
+		left:38%;
+		top:210px;
+		opacity:0;
+		z-index: -10;
+
+	}
+
+	#button{
+		background-color:red;
+		width:100px;
+		height:100px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position:absolute;
+		left:43%;
+		top:550px;
+		border-radius: 50%;
+
+	}
+
+
+	</style>
+</head>
+<body>
+
+
+<div id="background"></div>
+<div id="open"></div>
+<div id="message">
+	<div id="letter"></div>
+</div>
+<a href="snowmanfun.html">
+<div id="button"></div>
+</a>
+
+	<script type="text/javascript">
+var open = document.getElementById("open")
+		function makeEnvelope (){
+		var card = document.createElement("div");
+			background.appendChild(card);
+			card.style.backgroundImage="url(envelope.png)";
+			card.style.width = "400px";
+			card.style.height = "400px";
+			card.style.display = "inline-block";
+			card.style.backgroundSize = "contain";
+			card.style.backgroundRepeat = "no-repeat";
+			card.style.position = "relative";
+			card.style.left = "30%";
+			card.style.top = "200px";
+			card.style.zIndex = "10"
+
+document.addEventListener("click", function(){
+	console.log("hi")
+				open.style.backgroundImage="url(openedenvelope.png)";
+				open.style.width = "275px";
+				open.style.height = "275px";
+				open.style.display = "inline-block";
+				open.style.backgroundSize = "contain";
+				open.style.backgroundRepeat = "no-repeat";
+				open.style.left = "60%";
+				open.style.top = "60px";
+				open.style.position = "absolute"
+
+
+
+				message.style.opacity = "1";
+				card.style.opacity = "0";
+			})
+			
+		}
+		
+		makeEnvelope();
+	
+
+
+		
+	</script>
+
+
+</body>
+</html>

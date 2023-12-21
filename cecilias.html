@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.ppl{
+			background-image:url(cece.png);
+			width:140px;
+			height:140px;
+			background-size: cover;
+			display: inline-block;
+			color:white;
+			position: relative;
+			z-index: 20;
+
+		}
+
+		#hidden{
+			background-image:url(hiddencece.jpg);
+			width:400px;
+			height:400px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			color:white;
+/*			z-index: -20;*/
+
+		}
+
+	</style>
+</head>
+<body>
+<div id="hidden"></div>
+	<script type="text/javascript">
+		
+		function makeCeces (input){
+			var cece = document.createElement("div")
+			document.body.appendChild(cece)
+			cece.classList.add("ppl")
+			console.log(counter)
+			cece.innerText = input
+			cece.style.zIndex = "20";
+
+			cece.addEventListener("click", function(event){
+				cece.style.opacity = "0";
+		
+		})	
+		}
+		
+		for(var counter=1; counter<101; counter=counter+1){
+			makeCeces(counter)
+		}
+
+		
+
+		
+	</script>
+
+</body>
+</html>
