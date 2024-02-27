@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+
+	#background{
+		z-index: -2000;
+		background-color: mistyrose;
+		width:100%;
+		height:100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position:absolute;
+	}
+
+	#title{
+		z-index: -1000;
+		background-color: darkviolet;
+		width:100%;
+		height:80px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position:absolute;
+	}
+
+	#baldcece{
+		z-index: -1000;
+		background-image:url("baldcece.JPG");
+		width:220px;
+		height:300px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position:absolute;
+		border-style: solid;
+		left: 45%;
+		top:190px;
+	}
+
+	#header{
+		font-size: 60px;
+		height: 500px;
+		color: white;
+		h1{font-family: 'VT323', monospace;}
+
+		li{font-family: courier;}
+
+		p{font-family: courier;}
+	}
+
+	#hair1{
+        background-image: url("cHair1.png");
+        width:490px;
+		height:640px;
+		left:0%;
+        top:70px;
+    }
+
+    #hair2{
+        background-image: url("cHair2.png");
+        width:325px;
+		height:385px;
+		left:23%;
+        top:420px;
+    }
+
+    #hair3{
+        background-image: url("cHair3.png");
+        width:210px;
+		height:265px;
+		left:63%;
+        top:120px;
+    }
+
+    #hair4{
+        background-image: url("cHair4.png");
+        width:340px;
+		height:440px;
+		left:75%;
+        top:300px;
+    }
+
+	 .parts{
+    	width: 150px;
+        height: 300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        left:41%;
+        top:180px;
+        position: absolute;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="background"></div>
+		<div id="title">
+			<center><div id="header">Give Cece a New Hairstyle!</center></div>
+		</div>
+		<div id="baldcece"></div>
+		<div class="parts" id="hair1"></div>
+		<div class="parts" id="hair2"></div>
+		<div class="parts" id="hair3"></div>
+		<div class="parts" id="hair4"></div>
+	</div>
+
+
+<script type="text/javascript">
+	
+var image;
+var clickCounter=0;
+		
+	hair1.addEventListener("click", function() {
+        image = "cHair1.png"
+
+
+	hair2.addEventListener("click", function() {
+        image = "cHair2.png"
+
+	hair3.addEventListener("click", function() {
+        image = "cHair3.png"
+
+
+	hair4.addEventListener("click", function() {
+        image = "cHair4.png"
+    });
+
+	background.addEventListener("click", function makeHair(event) {
+    	clickCounter=clickCounter+1;
+    	// background.style.zIndex = clickCounter;
+        var div = document.createElement("div");
+        div.style.zIndex = clickCounter+1;
+        document.body.appendChild(div);
+        div.classList.add("parts")
+        div.style.position="absolute";
+        div.style.left =   event.clientX - 50 + "px";
+        div.style.top = event.clientY - 50 + "px";
+        div.style.backgroundImage = "url("+image+")"
+
+        div.addEventListener("click", makeHair)
+		})
+
+
+
+</script>
+
+</body>
+</html>
+
+<!-- make similarly to the snowman project, but an if statement depending on each option, maybe with a little message-->
+<!-- you want cece to be your valentine, but she asks you to pick a hairstyle and if she likes it, she will give you a kiss! -->

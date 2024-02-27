@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+	<div id="names">What ice cream flavor should you try next?</div>
+
+	<script type="text/javascript">
+		
+
+		var icecream = ["kraft mac n cheese", "hot cheetos", "sweet avocado and cayenne", "thanksgiving dinner", "granny's mashed potato casserole", "lobster", "foie gras", "corn and cheese", "cicada", "horse meat", "pizza", "chili pepper"];
+
+		// var pics = []
+
+		document.addEventListener("click", function(){
+		var random =Math.round(Math.random()*11)
+		names.innerText = icecream[random]
+		console.log(random)
+		})
+
+	</script>
+</body>
+</html>

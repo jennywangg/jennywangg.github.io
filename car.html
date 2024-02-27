@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+		
+		#car{
+			background-image: url("duckcar.png");
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			background-size: cover;
+			left: 0px;
+			top: 0px;
+		}
+
+		#bg{
+			background-image: url("roadbg.png");
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			background-size: cover;
+			z-index: -1000;
+
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+<div id="car"></div>
+<div id="bg"></div>
+<script type="text/javascript">
+	var x = 0
+	var y = 0
+	document.addEventListener("keydown", function(event){
+		console.log(event.code)
+		if (event.code == "ArrowRight")
+			{x=x+10
+			car.style.left = x + "px"}
+
+	})
+
+	document.addEventListener("keydown", function(event){
+		console.log(event.code)
+		if (event.code == "ArrowLeft")
+			{x=x-10
+			car.style.left = x + "px"}
+
+	})
+
+	document.addEventListener("keydown", function(event){
+		console.log(event.code)
+		if (event.code == "ArrowUp")
+			{y=y-10
+			car.style.top = y + "px"}
+
+	})
+
+	document.addEventListener("keydown", function(event){
+		console.log(event.code)
+		if (event.code == "ArrowDown")
+			{y=y+10
+			car.style.top = y + "px"}
+
+	})
+
+	// function sayhi(input){console.log("hi")}
+
+	// sayhi()
+</script>
+	
+</body>
+</html>
