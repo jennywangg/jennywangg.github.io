@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<style type="text/css">
+		
+		body{
+			background-color:rgb(255, 255, 255);
+		}
+
+#title{
+	font-size: 80px;
+	text-align: center;
+	position: relative;
+
+}
+
+	</style>
+</head>
+<body>
+
+	<div id="title">Click to generate a random color!</div>
+
+	<script type="text/javascript">
+		document.addEventListener("click", function(event){
+
+			var r = Math.random()*255
+
+			var g = Math.random()*255
+
+			var b = Math.random()*255
+
+			document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b +")"
+
+
+		})
+
+	</script>
+
+</body>
+</html>

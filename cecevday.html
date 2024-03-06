@@ -12,6 +12,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		position:absolute;
+
 	}
 
 	#title{
@@ -85,9 +86,10 @@
         height: 300px;
         background-size: contain;
         background-repeat: no-repeat;
-        left:41%;
-        top:180px;
+        /*left:41%;
+        top:180px;*/
         position: absolute;
+/*        background-color:red;*/
 	}
 
 	</style>
@@ -111,14 +113,18 @@ var image;
 var clickCounter=0;
 		
 	hair1.addEventListener("click", function() {
-        image = "cHair1.png"
+        hair1.style.clientX = ("39%")
+        hair1.style.clientY = (130)
+        })
 
 
 	hair2.addEventListener("click", function() {
         image = "cHair2.png"
+        })
 
 	hair3.addEventListener("click", function() {
         image = "cHair3.png"
+        })
 
 
 	hair4.addEventListener("click", function() {
@@ -127,12 +133,13 @@ var clickCounter=0;
 
 	background.addEventListener("click", function makeHair(event) {
     	clickCounter=clickCounter+1;
+    	console.log(clickCounter)
     	// background.style.zIndex = clickCounter;
         var div = document.createElement("div");
+          document.body.appendChild(div);
         div.style.zIndex = clickCounter+1;
-        document.body.appendChild(div);
         div.classList.add("parts")
-        div.style.position="absolute";
+        // div.style.position="absolute";
         div.style.left =   event.clientX - 50 + "px";
         div.style.top = event.clientY - 50 + "px";
         div.style.backgroundImage = "url("+image+")"
