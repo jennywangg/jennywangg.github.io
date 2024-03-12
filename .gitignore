@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 *.zip
+=======
+*.zip
+.DS_Store
+>>>>>>> develop
