@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+	#bg{
+		background-image:url("Fbookshelf.png");
+		width: 4000px;
+		height: 770px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position:absolute;
+		z-index: -2;
+	}
+
+	#ladder{
+		background-image:url("ladder1.png");
+		width: 500px;
+		height: 800px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position:absolute;
+		z-index: 2;
+
+	}
+	</style>
+
+</head>
+<body>
+	<div id="bg"></div>
+	<div id="ladder"></div>
+
+	<!-- <a id="link0" href=""><</a> -->
+
+	<script type="text/javascript">
+    function makeBooks (x) {
+var link = document.createElement("a")
+bg.appendChild(link)
+
+
+    var book = document.createElement('div');
+        link.appendChild(book);
+        link.href = "https://www.pinterest.com/search/pins/?q=Library%20ladders%20rolling&rs=srs&b_id=BAC-JJ0xPtDNAAAAAAAAAADbN2mgdbj_Uxoy_nNt5qVOVQEoOuqwH6dTICdy_C9ZKA2lDAgKO_Z7uFag49j0v_iW3o0ky9aBOw&source_id=1q8Ib19Z"
+
+            var r = Math.random()*145
+            var g = Math.random()*100
+            var b = Math.random()*15
+
+ 	book.id = "square" + x;
+            book.style.width = "40px";
+            book.style.height = Math.random()*40+100 + "px";
+            book.style.display = "inline-block";
+            book.style.margin = "1px";
+            book.style.backgroundRepeat = "no-repeat";
+            book.style.border = "1px";
+            // book.style.z-index = 1;
+            book.style.backgroundColor = "rgb(" + r + "," + g + "," + b +")"
+            // book.style.backgroundImage = "url("fbspine.png")";
+
+            book.style.backgroundSize = "contain";
+           };
+
+
+    for (var i = 0; i < 400; i++) 
+    { makeBooks(i);}
+
+
+// var square1 = document.getElementById('square1')
+
+// link1.appendChild(square1);
+
+
+// how can we randomizie the links:
+
+// Idea 1: randomize a number with variable and use that on books to pick which ones will have links
+
+	</script>
+
+</body>
+</html>

@@ -25,28 +25,36 @@
 
 <script type="text/javascript">
 
-//For all of your media, to use this, label each file  with numbers (eg.1.jpg, 2.jpg) and keep them in the same folder as this html file. If they are not jpgs, change the extension "jpg" in the recipe below (line 25) to whatever file type they are.  
-
-//Below is the recipe to make the squares appear on the page//
     
     function makeBooks (x) {
 
     var book = document.createElement('div');
         document.body.appendChild(book);
+            var r = Math.random()*255
+            var g = Math.random()*255
+            var b = Math.random()*255
+
+            // document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b +")"
+
+            // r = Math.random()*256;
+            // g = Math.random()*256;
+            // b = Math.random()*256;
+            // bgColor = "(r + "," + g + "," + b)";
+
             book.style.width = "40px";
-            book.style.height = Math.random()*70+100 + "px";
+            book.style.height = Math.random()*40+130 + "px";
             book.style.display = "inline-block";
             book.style.margin = "1px";
             book.style.backgroundRepeat = "no-repeat";
             book.style.border = "1px";
-            book.style.backgroundColor = "green";
-
+            book.style.backgroundColor = "rgb(" + r + "," + g + "," + b +")"
+         
+          
             book.style.backgroundImage = "url(" + x + ".jpg)";
 
             book.style.backgroundSize = "contain";
             book.style.id = "square" + x;};
 
-//Below, is the for loop in which where the squares are actually made. This for loop is where the function above is actually called. It is called 14 times, (between the values of 0 and 15) and because the variable i is declared in the for loop and is then being passed to the makeSquare recipe, each time the function runs, i changes in value (+1). Thus, the attributes that involve the i change in value as well (eg. the id attribute changes to be whatever i was last time, plus 1.)//
 
     for (var i = 0; i < 30; i++) 
     { makeBooks(i);}
