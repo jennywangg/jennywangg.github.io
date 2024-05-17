@@ -3,6 +3,10 @@
 <head>
 	<style type="text/css">
 
+		body{
+			margin:0px;
+		}
+
 	#bg{
 		background-image:url("Fbookshelf.png");
 		width: 4000px;
@@ -15,12 +19,12 @@
 
 	#ladder{
 		background-image:url("ladder1.png");
-		width: 500px;
+		width: 200px;
 		height: 900px;
 		background-size: contain;
 		background-repeat: no-repeat;
 		position:absolute;
-		z-index: 2;
+		z-index: 1;
 
 	}
 	</style>
@@ -62,43 +66,143 @@ bg.appendChild(link)
            };
 
 
-    for (var i = 0; i < 433; i++) 
+    for (var i = 0; i < 432; i++) 
     	// 108 per row
     { makeBooks(i);}
 
 
 
-link21.href="eventListener.html"
-link21.style.backgroundColor = "thistle"
-link21.style.width = "30px"
+link18.href="eventListener.html"
+link18.style.backgroundColor = "thistle"
+link18.style.width = "30px"
 
 link81.href="gingerbreadmen.html"
 link81.style.backgroundColor = "thistle"
 link81.zIndex = "2"
 			
-link120.href="cecilias.html"
+link120.href="animation.html"
 link120.style.backgroundColor = "thistle"
-link120.zIndex = "2"
+link120.style.zIndex = "2"
 
 link162.href="thanksgivingcard.html"
 link162.style.backgroundColor = "thistle"
 link162.zIndex = "2"
 
-link251.href="cecevday.html"
+link251.href="car.html"
 link251.style.backgroundColor = "thistle"
 link251.zIndex = "2"
 
-link306.href="car.html"
-link306.style.backgroundColor = "thistle"
-link306.zIndex = "2"
+link286.href="cecevday.html"
+link286.style.backgroundColor = "thistle"
+link286.zIndex = "2"
 
 link373.href="colors.html"
 link373.style.backgroundColor = "thistle"
 link373.zIndex = "2"
 
-link420.href="animation.html"
-link420.style.backgroundColor = "thistle"
-link420.zIndex = "2"
+link414.href="cecilias.html"
+link414.style.backgroundColor = "thistle"
+link414.zIndex = "2"
+
+	document.addEventListener("mousemove", function(event){
+		console.log(event.clientX)
+				bg.style.left="0px"
+				ladder.style.left = event.clientX - 250 +"px";
+				// ladder.style.top = event.clientY -150 +"px";
+				// console.log(event.clientX, event.clientY)
+
+				// if(event.clientX>900){
+				// 	bg.style.transition="4s"
+				// 	bg.style.left = "-50%"
+
+				// }
+
+				if(event.clientX>700){
+					bg.style.transition="4s"
+					bg.style.left = "-100%"
+
+				}
+
+				if(event.clientX>1100){
+					bg.style.transition="4s"
+					bg.style.left = "-150%"
+
+				}
+
+				if(event.clientX>1300){
+					bg.style.transition="4s"
+					bg.style.left = "-180%"
+
+				}
+
+				// if(event.clientX>1500){
+				// 	bg.style.transition="4s"
+				// 	bg.style.left = "-200%"
+
+				// }
+
+				// if(event.clientX>1700){
+				// 	bg.style.transition="2s"
+				// 	bg.style.left = "-240%"
+
+				// }
+
+				// if(event.clientX>1900){
+				// 	bg.style.transition="2s"
+				// 	bg.style.left = "-290%"
+
+				// }
+
+				// if(event.clientX>2100){
+				// 	bg.style.transition="2s"
+				// 	bg.style.left = "-320%"
+
+				// }
+
+				// if(event.clientX>2300){
+				// 	bg.style.transition="2s"
+				// 	bg.style.left = "-350%"
+
+				// }
+
+				// if(event.clientX>2500){
+				// 	bg.style.transition="2s"
+				// 	bg.style.left = "-400%"
+
+				// }
+
+				// if(event.clientX>2700){
+				// 	bg.style.transition="2s"
+				// 	bg.style.left = "-420%"
+
+				// }
+
+
+// _____
+				// if(event.clientX>1100){
+				// 	bg.style.transition="1s"
+				// 	bg.style.left = "-250%"
+
+					
+				// }
+
+				// if(event.clientX>1200){
+				// 	bg.style.transition="1s"
+				// 	bg.style.left = "-300%"
+
+					
+				// }
+
+
+				// if(event.clientX>4000 && event.clientX<4001){
+				// 	bg.style.transition="1s"
+				// 	bg.style.left = "0%"
+
+
+				// }
+
+
+			})
 
 
 // var square1 = document.getElementById('square1')
