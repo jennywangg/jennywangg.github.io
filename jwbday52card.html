@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+		#car{
+			background-image: url("layinglizard.png");
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 0px;
+			top: 0px;
+		}
+
+		#bg{
+			background-image: url("australia.jpeg");
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			background-size: cover;
+			z-index: -1000;
+
+		}
+
+		#carrot{
+			background-image: url("carrot.png");
+			height: 100px;
+			width: 100px;
+			left: 780px;
+			top:600px;
+			position: absolute;
+			background-size: cover;
+
+
+		}
+
+		#roach{
+			background-image: url("roach.png");
+			height: 100px;
+			width: 100px;
+			left: 380px;
+			top:500px;
+			position: absolute;
+			background-size: contain;
+
+
+		}
+
+		#header{
+			font-size: 70px;
+			margin-top: 40px;
+			position: relative;
+			color: blueviolet;
+			text-decoration: none;
+			margin:0px;
+			font-family: 'VT323',
+				 monospace;;
+		/*	font-family: "Concert One", sans-serif;
+  			font-weight: 400;
+  			font-style: normal;*/
+
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="car"></div>
+	<div id="bg"></div>
+	<div id="carrot"></div>
+	<div id="roach"></div>
+
+	<div id="title">
+			<center><div id="header">Happy Birthday!!! Have the best year ever! <3</center></div>
+		</div>
+
+<script type="text/javascript">
+	var x = 0
+	var y = 0
+	document.addEventListener("keydown", function(event){
+		console.log(event.code)
+		if (event.code == "ArrowRight")
+			{x=x+20
+			car.style.left = x + "px"}
+
+	})
+
+	document.addEventListener("keydown", function(event){
+		console.log(event.code)
+		if (event.code == "ArrowLeft")
+			{x=x-20
+			car.style.left = x + "px"}
+
+	})
+
+	document.addEventListener("keydown", function(event){
+		console.log(event.code)
+		if (event.code == "ArrowUp")
+			{y=y-20
+			car.style.top = y + "px"}
+
+	})
+
+	document.addEventListener("keydown", function(event){
+		console.log(event.code)
+		if (event.code == "ArrowDown")
+			{y=y+20
+			car.style.top = y + "px"}
+
+	})
+
+	// function sayhi(input){console.log("hi")}
+
+	// sayhi()
+</script>
+
+</body>
+</html>
